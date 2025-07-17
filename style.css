@@ -1,0 +1,65 @@
+
+body {
+  background-color: #f2f2f2;
+}
+
+.contianer {
+display: grid;
+ /*resaon why all button took all width bcz we didnt specifyed columns and its defulat behavioer alig-items:strech this caues each grid to streach to fill avaible space */
+grid-template-columns: repeat(4, 1fr);
+gap: 10px;
+width: 100%;
+max-width: 320px;
+margin: 40px auto;
+padding: 20px;
+border-radius: 20px;
+background-color: #ffffff;
+box-shadow: 0 15px 40px rgb(0, 0, 0, 0.15);
+}
+.screen {
+  grid-column: span 4;
+  text-align: right;
+  padding: 30px 10px;
+  border: 2px solid black;
+  border-radius: 5px;
+  font-size: 2rem;
+  overflow-x: auto;
+  white-space: nowrap;
+  background-color: #e9eef2;
+  color: #1e1e1e;
+}
+button {
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  border: none;
+  background-color: #e9eef2;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  color: #000;
+
+}
+button:hover {
+background-color: #d3dce4;
+}
+button.equal {
+  background-color: #4caf50;
+  color: #fff;
+}
+button.operator{
+  background-color: #ff9800;
+}
+button.clear{
+  background-color: #f44336;
+  color: #fff;
+}
+.blinking {
+  animation: blink 1s  step-start infinite;
+}
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
